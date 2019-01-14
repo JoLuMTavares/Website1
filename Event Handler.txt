@@ -1,0 +1,12 @@
+EVENT HANDLER:
+onerror+
+onload+
+onclick+
+onkeypress+
+onblur+
+onfocus+
+onresize+
+onreset+
+onmousedown
+onmouseout+
+onmouseover+

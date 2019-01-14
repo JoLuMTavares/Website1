@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="css/reg.css"/>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<script src="script/templates.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Registrierung</title>
+	</head>
+	<body onload="daten()" onresize="resizeAlarm()">
+		<header>
+			<h1>Erste Website</h1>
+			<img src="bilder/_MG_6387_1280.jpg"></img>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="Schach.html">Schach</a>
+				<a href="rechner.html">Taschenrechner</a>
+				<a href="multiplikationstafel.html">Multiplikationstafel</a>
+				<a href="csswechs.html">CSS Wechsler</a>
+				<a href="operationen.html">Operationen</a>
+				<a href="galerie.html">Galerie</a>
+				<a href="reg.html">Registrierung</a>
+			</nav>
+			
+		</header>
+		<div id="inhalt" class="inhalt">
+			<h1 align="center">REGISTRIERUNG</h1>
+			<form action=# onreset="resetAlarm();">
+				<table id="RegT" align="center">
+					<tr>
+						<th>NAME</th><th>GEBURTSTAG</th><th>ADRESSE</th>
+					</tr>
+					<tr>
+						<td>
+							<label for="vorname">Vorname</label>
+							<input type='text' name="vorname" size="5" maxlength="13" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="nachname">Nachname</label>
+							<input type='text' name="nachname" size="5" maxlength="13" onfocus="focusFunction()" onblur="blurFunction()"></input>
+						</td>
+						<td>
+							<select name="Monat">
+				
+							</select>
+							<select name="Tag">
+							 
+							</select>
+							
+							<select name="Jahr">
+						
+							</select>
+						</td>
+						<td>
+							<label for="anschrift">Anschrift</label>
+							<input type='text' name="anschrift" size="5" maxlength="24" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="hausnummer">Hausnummer</label>
+							<input type='text' name="hausnummer" size="5" maxlength="4" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="postempfaenger">Postempfänger (c/o)</label>
+							<input type='text' name="postempfaenger" size="5" maxlength="24" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="postleitzahl">Postleitzahl</label>
+							<input type='text' name="postleitzahl" size="5" maxlength="5" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="ort">Ort</label>
+							<input type='text' name="ort" size="5" maxlength="16" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+							<label for="bezirk">Bezirk</label>
+							<input type='text' name="bezirk" size="5" maxlength="16" onfocus="focusFunction()" onblur="blurFunction()"></input><br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='button' onmouseover="shadowButton(this)" onmouseout="normalButton(this)" onclick="informationen();" value="OK">
+							<input type='reset' id="reset" onmouseover="shadowButton(this)" onmouseout="normalButton(this);" value="Reset">
+							<!--<p id="info"></p>-->
+						</td>
+					</tr>
+				</table>
+				
+				
+				
+			</form>
+			<div id="ausgabe"></div>
+		</div>
+		<aside>
+			<h2>BESCHREIBUNG</h2>
+			<p id="bschr">
+				Hier können Sie ein registrierung simulieren. Erste müssen Sie alle daten füllen. Dann klicken
+				Sie «OK» Taste. Das Ergebnis kommt an das Grüne Pult. Da können Sie jede liste für mehre 
+				informationen expandieren.
+				Sie können die «Reset» Taste selektieren. Aber alle informationen gelöscht sind.
+			</p>
+		</aside>
+		<div id="ergebnis">
+			<div class="container">
+				<h2 id="regInfo">Ihre registrierung</h2>
+				<p id="regTip">Für öffnen und schließen, klicken Sie bitte auf die jeweilige Tafel.</p>
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Ihre Name</a>
+						</h4>
+					  </div>
+					  <div id="collapse1" class="panel-collapse collapse in">
+							
+					  </div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Geburtstag</a>
+						</h4>
+					  </div>
+					  <div id="collapse2" class="panel-collapse collapse">
+						
+					  </div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Ihre Adresse</a>
+						</h4>
+					  </div>
+					  <div id="collapse3" class="panel-collapse collapse">
+						
+					  </div>	
+					</div>
+			  </div> 
+			</div>
+		</div>
+		<footer>
+			<br />
+			<a id="fLink" href="kontakt.html">Kontakt</a>
+			<a id="fLink" href="cpright.html">&#169; Copyright</a>
+			<a id="fLink" href="feedback.html">Feedback</a>
+		</footer>
+	</body>
+</html>

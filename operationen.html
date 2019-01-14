@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="css/operationen.css"/>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<script src="script/templates.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Operationen</title>
+		
+	</head>
+	<body onresize="resizeAlarm()">
+		<header>
+			<h1>Erste Website</h1>
+			<img src="bilder/_MG_6387_1280.jpg"></img>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="Schach.html">Schach</a>
+				<a href="rechner.html">Taschenrechner</a>
+				<a href="multiplikationstafel.html">Multiplikationstafel</a>
+				<a href="csswechs.html">CSS Wechsler</a>
+				<a href="operationen.html">Operationen</a>
+				<a href="galerie.html">Galerie</a>
+				<a href="reg.html">Registrierung</a>
+			</nav>
+			
+		</header>
+		<div id="inhalt">INHALT
+			<p id="demo"></p>
+			<br /><br />
+			<!-- Note that the <li> elements inside <ul> are not indented (whitespaces). 
+			If they were, the first child node of <ul> would be a text node 
+			-->
+			<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+
+			<p>Bitte, klicken Sie die Taste, sodass das erste element von diese liste gelöscht ist.</p>
+
+			<button onclick="myFunction()">Try it</button>
+
+			<ul id="myList2">
+			  <li>Coffee</li>
+			  <li>Tea</li>
+			  <li>Milch</li>
+			  <li>Bier</li>
+			  <li>Nektar</li>
+			</ul>
+
+			<p>Bitte, klicken Sie die Taste. Dann kann mann ein element in der liste einfügen</p>
+
+			<button onclick="myFunction2()">Try it</button>
+			<br />
+
+			<p><strong>Example explained:</strong><br>First create a LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally insert the LI node before the first child node in the list.</p>
+			
+			<ul id="myList3"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+
+			<p>Bitte, klicken Sie die Taste, sodass das erste element von diese liste gewechselt ist.</p>
+
+			<button onclick="myFunction3()">Try it</button>
+			<br />
+			
+			<p>Bitte, klicken Sie die Taste. Dann können Sie den letzte kind von DIV anzeigen.</p>
+
+			<div id="myDIV"><p>A P element - First child in div</p><span>A Span element - Last child in div</span></div>
+
+			<button onclick="myFunction4()">Try it</button>
+
+			<p id="demo2"></p>
+			
+			<p>Bitte, klicken Sie die Taste. Dann können Sie den erste kind von DIV anzeigen.</p>
+
+			<div id="myDIV2"><p>A P element - First child in div</p><span>A Span element - Last child in div</span></div>
+
+			<button onclick="myFunction5()">Try it</button>
+
+			<p id="demo3"></p>
+
+			<div id="myDIV3">
+			  <h2 class="example">A heading with class="example" in div</h2>
+			  <p class="example">A paragraph with class="example" in div.</p> 
+			</div>
+
+			<p>Bitte, klicken Sie die Taste. Dann können Sie den Text vom ersten element mit class="example" in div wechseln.</p>
+
+			<button onclick="myFunction6()">Try it</button>
+			
+			<div id="myDIV4">
+			  <h2 class="example">A heading with class="example" in div</h2>
+			  <p class="example">A p element with class="example" in a div.</p>
+			  <p class="example">Another p element with class="example" in a div.</p>
+			  <p>A p element in div with a <span class="example">span Element with class="example"</span> inside of it.</p>
+			</div>
+
+			<p>Bitte, klicken Sie die Taste. Dann kann mann eine farbe zu alle Elemente mit class="example" in DIV einfügen.</p>
+
+			<button onclick="myFunction7()">Try it</button>
+
+			<p><strong>Note:</strong> The querySelectorAll() method is not supported in Internet Explorer 8 and earlier versions.</p>
+			
+			<h3>Hello World</h3>
+
+			<p>Bitte, klicken Sie die Taste. Dann kann mann ein Klass Attribut mit theQ wert von "democlass" zu h1 Element enfügen.</p>
+
+			<button onclick="myFunction8()">Try it</button>
+
+			<h1 id="myH1">How to change the style of a header</h1>
+
+			<p>Bitte, klicken Sie die Taste. Dann kann mann eine farbe zu h1 Element enfügen.</p>
+
+			<button onclick="myFunction9()">Try it</button>
+			
+			
+			<script>
+				function myFunction() {
+					var list = document.getElementById("myList");
+					list.removeChild(list.childNodes[0]);
+				}
+				
+				document.addEventListener("click", function(){
+					document.getElementById("demo").innerHTML = "Hello World";
+				});
+				
+				function myFunction2() {
+					var newItem = document.createElement("LI");
+					var textnode = document.createTextNode("Water");
+					newItem.appendChild(textnode);
+
+					var list = document.getElementById("myList2");
+					list.insertBefore(newItem, list.childNodes[4]);
+					
+					var alles='';
+					for(var i =0; i < list.childNodes.length; i++) {
+						alles += list.childNodes[i].nodeName + '----';
+					}
+					
+					var ausgabe = document.createElement("div");
+					var inhalt = document.createTextNode(alles);
+					ausgabe.appendChild(inhalt);
+					document.body.appendChild(ausgabe);
+				}
+				
+				function myFunction3() {
+					var textnode = document.createTextNode("Water");
+					var item = document.getElementById("myList3").childNodes[0];
+					item.replaceChild(textnode, item.childNodes[0]);
+				}
+				
+				function myFunction4() {
+					var x = document.getElementById("myDIV").lastChild.nodeName;
+					document.getElementById("demo2").innerHTML = x; 
+				}
+			
+				function myFunction5() {
+					var x = document.getElementById("myDIV2").firstChild.nodeName;
+					document.getElementById("demo3").innerHTML = x; 
+				}
+				
+				function myFunction6() {
+					var x = document.getElementById("myDIV3");
+					x.querySelector(".example").innerHTML = "Hello World!";
+				}
+				
+				function myFunction7() {
+					var x = document.getElementById("myDIV4").querySelectorAll(".example");
+					var i;
+					for (i = 0; i < x.length; i++) {
+						x[i].style.backgroundColor = "red";
+					}
+				}
+				
+				function myFunction8() {
+					document.getElementsByTagName("H3")[0].setAttribute("class", "democlass"); 
+
+				}
+				
+				function myFunction9() {
+					document.getElementById("myH1").style.color = "blue";
+				}
+			</script>
+		</div>
+		<aside>
+			<h2>BESCHREIBUNG</h2>
+			<p id="bschr">
+				Hier gibt es verschidenen operationen.
+				<br />
+				Jede Taste gibt ein spezifisch Ergebnis.
+			</p>
+		</aside>
+		<footer>
+			<br />
+			<a id="fLink" href="kontakt.html">Kontakt</a>
+			<a id="fLink" href="cpright.html">&#169; Copyright</a>
+			<a id="fLink" href="feedback.html">Feedback</a>
+		</footer>
+
+	</body>
+</html>

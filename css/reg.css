@@ -1,0 +1,111 @@
+/* Kode für die seite */
+html, body {
+	width: 100%;
+	height: 100%;
+	/*opacity: 0.5; */
+}
+
+body {
+	margin-left: -0.1px;
+}
+
+img {
+	width: 100%;
+	height: 50%;
+	/* Mit dieser Kode Linie gibt es keine Verzerrung */
+	object-fit: cover; 
+}
+
+div, header, nav, aisde, footer {
+	/*border: 1px solid blue;
+	/*margin-bottom: 5px;*
+	border-collapse: collapse;*/
+	box-sizing: border-box;
+}
+
+header, nav, footer {
+	width: 100%;
+}
+
+header {
+	height: 35%;
+}
+
+nav {
+	padding-left: 2%;
+	background-color: skyblue;
+	height: 25%x;
+	font-size: 1.2em;
+}
+
+footer {
+	float: left;
+	height: 15%;
+}
+
+a#fLink {
+	color: #47a;
+	font-size: 1.0em;
+	text-decoration: none;
+}
+
+a#fLink:hover {
+	color: #147;
+	text-decoration: underline;
+}
+
+div#inhalt, aside {
+	float: left;
+	height: 65%;
+}
+
+div#inhalt {
+	width: 80%;
+	background-color: gold;
+	height: 80%;
+}
+
+aside {
+	background-color: lightgrey;
+	width: 20%;
+	height: 80%;
+}
+
+/* ++++++++++++++++++ Kode für die Registrierung ++++++++++++++++++ */
+
+
+/* Dimensionen für die Tabelle */
+table#RegT {
+	
+	width: 800px;
+	height: 390px;
+	
+	text-align: center;
+	font-size: 1.0em;
+	border-collapse: collapse;
+	background-color: skyblue;
+	
+}
+
+/* Dimensionen für jede Spalten */ 
+td {
+	width: 100px;		
+}
+
+/* Dimisionen für den Ergebnis Block*/
+div#ergebnis {
+	background-color: green;
+	width: 100%;
+	float: left;
+	height: 500px;
+}
+
+/* Farbe für H2 */
+h2#regInfo {
+	color: #DDD;
+}
+
+/* Farbe für den Paragraph */
+p#regTip {
+	color: #CCC;
+}

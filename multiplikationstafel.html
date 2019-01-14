@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="script/templates.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/multiplikationstafel.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+			
+		</style>
+	</head>
+	<body onload="">
+		<header>
+			<h1>Erste Website</h1>
+			<img src="bilder/_MG_6387_1280.jpg"></img>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="Schach.html">Schach</a>
+				<a href="rechner.html">Taschenrechner</a>
+				<a href="multiplikationstafel.html">Multiplikationstafel</a>
+				<a href="csswechs.html">CSS Wechsler</a>
+				<a href="operationen.html">Operationen</a>
+				<a href="galerie.html">Galerie</a>
+				<a href="reg.html">Registrierung</a>
+			</nav>
+			
+		</header>
+		<div id="inhalt" class="inhalt">
+			<h2>MULTIPLIKATIONSTAFEL</h2>
+			<form method="" action="">
+				<label for="anzahl">Anzahl:</label><br/>
+				<input type="text" id="anzahl"/><br/>
+				<label for="multi">Multiplikationswert: </label><br/>
+				<input type="text" id="multi"/><br/>
+				<input type="button" onclick="clearit();wertEingeben();" value="Senden">
+			</form>
+			<div id="ausgabe">
+			
+			</div>
+		</div>
+		<aside>
+			<h2>BESCHREIBUNG</h2>
+			<p id="bschr">
+				Bitte, schreiben Sie ein wert für Anzahl. Das heißt, wie viele Tabelle wollen Sie zeigen an. 
+				<br />
+				Danach schreiben Sie, bitte, welche Multiplikationswert wollen Sie.
+				<br />
+				Das Ergebnis wird eine (oder mehr) Multiplikationstafel für das gewählt Multiplikationswert.
+			</p>
+		</aside>
+		<footer>
+			<a id="fLink" href="kontakt.html">Kontakt</a>
+			<a id="fLink" href="cpright.html">&#169; Copyright</a>
+			<a id="fLink" href="feedback.html">Feedback</a>
+		</footer>
+
+	</body>
+</html>

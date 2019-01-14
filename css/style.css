@@ -1,0 +1,88 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	/*opacity: 0.5; */
+}
+
+body {
+	margin-left: -0.1px;
+	font-family: arial, sans-serif;
+}
+
+img {
+	width: 100%;
+	height: 50%;
+	/* Mit dieser Kode Linie gibt es keine Verzerrung */
+	object-fit: cover; 
+}
+
+/* Klein img (und nicht gefunden). Das ist für die haupt seite */
+img#keinImg {
+	width: 20%;
+	height: 10%;
+}
+
+div, header, nav, aisde, footer {
+	/*border: 1px solid blue;
+	/*margin-bottom: 5px;*
+	border-collapse: collapse;*/
+	box-sizing: border-box;
+}
+
+header, nav, footer {
+	width: 100%;
+}
+
+header {
+	height: 35%;
+}
+
+nav {
+	padding-left: 2%;
+	background-color: skyblue;
+	height: 25%x;
+	font-size: 1.2em;
+}
+
+
+
+footer {
+	float: left;
+	height: 15%;
+	
+}
+
+
+
+div#inhalt, aside {
+	float: left;
+	height: 65%;
+}
+
+div#inhalt {
+	width: 80%;
+}
+
+aside {
+	background-color: lightgrey;
+	width: 20%;
+}
+
+p#bschr {
+	text-align: justify;
+	font-size: 1.2em;
+}
+
+
+/* ++++++++++++++++++ Kode für Haupt seite ++++++++++++++++++ */
+p#wkText {
+	font-size: 1.5em;
+}
+
+/* Kode für Kontakt seite */
+
+h2#kontakt, address {
+	padding-left: 2%;
+}
+
+

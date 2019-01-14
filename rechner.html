@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="script/templates.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/rechner.css"/>
+		
+		<title>Taschenrechner</title>
+	</head>
+	<body>
+		<header>
+			<h1>Erste Website</h1>
+			<img src="bilder/_MG_6387_1280.jpg"></img>
+			<nav>
+				<a class="link" href="index.html">Home</a>
+				<a class="link" href="Schach.html">Schach</a>
+				<a class="link" href="rechner.html">Taschenrechner</a>
+				<a class="link" href="multiplikationstafel.html">Multiplikationstafel</a>
+				<a class="link" href="csswechs.html">CSS Wechsler</a>
+				<a class="link" href="operationen.html">Operationen</a>
+				<a class="link" href="galerie.html">Galerie</a>
+				<a class="link" href="reg.html">Registrierung</a>
+			</nav>
+			
+		</header>
+		<div id="inhalt" class="inhalt">
+			<h1 align="center">RECHNER</h1>
+			<form Name="calculator">
+				<table id="rc"  align="center">
+					<tr id ="screen">
+						<td colspan=5>
+							<input id="txt1" name="smalldisplay" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text">
+							<input id="txt2" name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text">
+						</td>
+						<td style="display:none"><input name="temp" type="text"></td>
+						<td style="display:none"><input name="M" type="number"></td>
+						
+					</tr>
+					<tr>
+						<td><input id="btnMC" type=button value="MC" OnClick="calculator.M.value=''"></td>
+						<td><input id="btnN" type=button value="1" OnClick="calculator.display.value+='1'"></td>
+						<td><input id="btnN" type=button value="2" OnClick="calculator.display.value+='2'"></td>
+						<td><input id="btnN" type=button value="3" OnClick="calculator.display.value+='3'"></td>
+						<td><input id="btnOp" type=button value="+" OnClick="operator(calculator.display.value, '+');"></td>
+						<td><input id="btnC" type=button value="C" OnClick="klarerBildschirm();"></td>
+					</tr>
+					<tr>
+						<td><input id="btnMR" type=button value="MR" OnClick="calculator.display.value=calculator.M.value"></td>
+						<td><input id="btnN" type=button value="4" OnClick="calculator.display.value+='4'"></td>
+						<td><input id="btnN" type=button value="5" OnClick="calculator.display.value+='5'"></td>
+						<td><input id="btnN" type=button value="6" OnClick="calculator.display.value+='6'"></td>
+						<td><input id="btnOp" type=button value="&#8722;" OnClick="operator(calculator.display.value, '-');"></td>
+						<td><input id="btnCE" type=button value="CE" OnClick="calculator.display.value=''"></td>
+					</tr>
+					<tr>
+						<td><input id="btnMS" type=button value="MS" OnClick="calculator.M.value=calculator.display.value"></td>
+						<td><input id="btnN" type=button value="7" OnClick="calculator.display.value+='7'"></td>
+						<td><input id="btnN" type=button value="8" OnClick="calculator.display.value+='8'"></td>
+						<td><input id="btnN" type=button value="9" OnClick="calculator.display.value+='9'"></td>
+						<td><input id="btnOp" type=button value="&#215;" OnClick="operator(calculator.display.value, '*');"></td>
+						<td><input id="btnB" type=button value="&#8592;" OnClick="backSpace();"></td>
+					</tr>
+					<tr>
+						<td><input id="btnMSub" type=button value="M-" OnClick="calculator.M.value=calculator.M.value=(Number(calculator.M.value))-(Number(calculator.display.value))"></td>
+						<td><input id="btnN" type=button value="0" OnClick="calculator.display.value+='0'"></td>
+						<td><input id="btnPo" type=button value="." OnClick="calculator.display.value+='.'"></td>
+						<td><input id="btnS" type=button value="&#177;" OnClick="calculator.display.value=(calculator.display.value==Math.abs(calculator.display.value)?-(calculator.display.value):Math.abs(calculator.display.value))"></td>
+						<td><input id="btnOp" type=button value="&#247;" OnClick="operator(calculator.display.value, '/');"></td>
+						<td><input id="btnPer" type=button value="n!" OnClick="permutation(calculator.display.value);"></td>
+					</tr>
+					<tr>
+						<td><input id="btnMPl" type=button value="M+" OnClick="calculator.M.value=calculator.M.value=(Number(calculator.M.value))+(Number(calculator.display.value))"></td>
+						<td><input id="btnOp" type=button value="%" OnClick="operator(calculator.display.value, '%');"></td>
+						<td><input id="btnOp" type=button value="x²" OnClick="calculator.display.value=Math.pow(calculator.display.value, 2)"></td>
+						<td><input id="btnOp" type=button value="&#8730;" OnClick="calculator.display.value=Math.sqrt(calculator.display.value)"></td>
+						<td><input id="btnOp" type=button value="1/x" OnClick="calculator.display.value=1/calculator.display.value"></td>
+						<td><input id="btnEv" type=button value="=" OnClick="berechnen(calculator.display.value);"></td>
+					</tr>
+				</table>
+			</form>		
+		</div>
+		<aside>
+			<h2>BESCHREIBUNG</h2>
+			<p id="bschr">
+				Hier können Sie verschiedenen operationen machen. 
+				Dieser Bildschirm gibt zwei display. Ein Größ für den aktuell wert. 
+				Ein klein für alle Werte und operationen speichern. 
+				<br />
+				Wenn Sie falsch sind, können Sie die «CE» Taste nutzen für ganz wert im Größen Display löschen.
+				Sie können die Gelb Taste für nur eine Ziffer löschen.
+				<br />
+				Wann Sie vertig sind, können Sie die Grüne Taste klicken und dann kommt das Ergebnis.</p>
+		</aside>
+		<footer>
+			<a id="fLink" href="kontakt.html">Kontakt</a>
+			<a id="fLink" href="cpright.html">&#169; Copyright</a>
+			<a id="fLink" href="feedback.html">Feedback</a>
+		</footer>
+		
+	</body>
+</html>

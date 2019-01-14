@@ -1,0 +1,95 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	/*opacity: 0.5; */
+}
+
+body {
+	margin-left: -0.1px;
+}
+
+img {
+	width: 100%;
+	height: 50%;
+	/* Mit dieser Kode Linie gibt es keine Verzerrung */
+	object-fit: cover; 
+}
+
+div, header, nav, aisde, footer {
+	/*border: 1px solid blue;
+	/*margin-bottom: 5px;*
+	border-collapse: collapse;*/
+	box-sizing: border-box;
+}
+
+header, nav, footer {
+	width: 100%;
+}
+
+header {
+	height: 35%;
+}
+
+nav {
+	padding-left: 2%;
+	background-color: skyblue;
+	height: 25%x;
+	font-size: 1.2em;
+}
+
+footer {
+	float: left;
+	height: 15%;
+	color: #47a;
+	font-size: 1.0em;
+}
+
+a#fLink {
+	color: #47a;
+	font-size: 1.0em;
+	text-decoration: none;
+}
+
+a#fLink:hover {
+	color: #147;
+	text-decoration: underline;
+}
+
+div#inhalt, aside {
+	float: left;
+	min-height: 65%;
+}
+
+div#inhalt {
+	padding-left: 2%;
+	width: 80%;
+	background-color: gold;
+}
+
+aside {
+	background-color: lightgrey;
+	width: 20%;
+}
+
+p#bschr {
+	text-align: justify;
+	font-size: 1.2em;
+}
+
+p#bschr::first-letter  {
+	color: #00aaff;
+    font-size: xx-large;
+}
+
+/* +++++++++++++++ Kode für Multiplikationstafel +++++++++++++++ */
+
+table#multi {
+	display: inline-block;
+	border: 10px groove red; 
+	cellpadding: 4px; 
+	cellspacing: 3px;
+}
+table#multi td {
+	border: 8px groove blue;
+	padding: 7px;
+}
